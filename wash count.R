@@ -1,4 +1,3 @@
-```R
 library(TCGAbiolinks)
 TCGAbiolinks:::getGDCprojects()$project_id
 cancer_type="TCGA-HNSC"
@@ -36,5 +35,3 @@ rownames(gene_counts) = merged_counts$Gene[!is.na(merged_counts$Gene)]
 
 gene_counts = gene_counts[apply(gene_counts, 1, sum) >= length(colnames(gene_counts)),]
 save(gene_counts, file = "test_3\\TCGA_HNSC_EXP.Rdata")
-
-```
